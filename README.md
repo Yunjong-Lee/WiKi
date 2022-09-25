@@ -121,6 +121,28 @@ URL 링크 : <example.com/> & <example@example.com>
 | -------- | :------: | -------- | -------- |  
 | No span  | Span across three columns    |||  
 
+
+<table>
+   <tbody>
+      <tr>
+         <td><b>followerId</b></td>
+         <td><b>followingId</b></td>
+      </tr>
+      <tr>
+         <td>text_1</td>
+         <td>description of text_1</td>
+      </tr>
+      <tr>
+         <td>text_2</td>
+         <td>description of text_2</td>
+      </tr>
+      <tr>
+         <td>text_3</td>
+         <td>description of text_3</td>
+      </tr>     
+   </tbody>
+</table>
+
 ### 10 이미지 (Image) 
 : `![이미지 이름](이미지 주소)`  
 
