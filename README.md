@@ -11,6 +11,15 @@
 
 --- 
 
+'''mermaid
+graph LR;
+  A(input)-->B[Cal];
+  B-->C(out);
+'''
+
+
+
+
 
 ### 1 칸 띄우기
 
