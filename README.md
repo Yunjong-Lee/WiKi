@@ -1,14 +1,17 @@
 # Markdown 문법
 [ref](https://eungbean.github.io/2018/06/11/How-to-use-markdown/)  
 
-## Index
+
+---
+
+# Index
 
 [1. 킨띄우기](#1-칸-띄우기)  
 [2. 형광색 처리](#2-형광색-처리)  
 [3. 코딩 블록 입히기](#3-코딩-블록-입히기)  
-[4. ](#4-)
-
-
+[4. 간트차트](#-Gantt)  
+[5. Diagram 구문](#Diagram-구문)  
+  
 --- 
 
 ```mermaid
@@ -23,7 +26,33 @@ gantt
     another task      : 24d
 ```
 
-## 📖 Gantt :fire:
+### [Diagram 구문](https://mermaid.js.org/syntax/flowchart.html)  
+##### 1. node and direction  
+  - TD or TB : Top to bottom
+  - BT : Buttom to top
+  - LR : Left to right
+  - RL : Right to Left
+
+```mermaid
+---
+title: Node
+---
+flowchart TD
+    start-->stop
+```
+
+##### 2. Node shapes
+```mermaid
+flowchart LR
+    id1(This is the text in the box)
+    id2[[This is the text in the box]]
+    id3[(Database)]
+    id4(circle))
+    id5>]
+```  
+
+
+### 📖 Gantt :fire:
 
 ```mermaid
 gantt
@@ -190,18 +219,6 @@ URL 링크 : <example.com/> & <example@example.com>
 
 ### 14. 각주 
 : [\^myfootnote]  
-
-
-
-## 수식
-
-
-
-
-
-
-  
-<br>  
 
 
 [^14]: 1234567890
