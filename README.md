@@ -58,6 +58,47 @@ flowchart LR
   C(((double circle)))
 ```  
 
+##### 3. 
+```mermaid
+  flowchart LR
+    A-->B
+    B-->C
+    C-->D
+    D-->E
+    click A "https://www.github.com" _blank
+    click B "https://www.github.com" "Open this in a new tab" _blank
+    click C href "https://www.github.com" _blank
+    click D href "https://www.github.com" "Open this in a new tab" _blank
+```  
+
+##### 4. 
+###### 4.1.
+```mermaid
+  flowchart LR
+    subgraph Case_01
+      B1 --> B2
+    end
+    A --> Case_01 --> B
+```
+###### 4.2.
+```mermaid
+  flowchart LR
+    subgraph TOP
+      direction TB
+      subgraph B1
+          direction RL
+          i1 -->f1
+      end
+      subgraph B2
+          direction BT
+          i2 -->f2
+      end
+    end
+    A --> TOP --> B
+    B1 --> B2
+```
+
+
 
 ### 📖 Gantt :fire:
 
