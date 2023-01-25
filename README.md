@@ -48,7 +48,8 @@ flowchart LR
   C(((double circle)))
 ```  
 
-##### 3. 
+##### 3. Flowchart
+###### 3.1.
 ```mermaid
   flowchart LR
     A-->B
@@ -60,9 +61,7 @@ flowchart LR
     click C href "https://www.github.com" _blank
     click D href "https://www.github.com" "Open this in a new tab" _blank
 ```  
-
-##### 4. 
-###### 4.1.
+###### 3.2.
 ```mermaid
   flowchart LR
     subgraph Case_01
@@ -70,7 +69,7 @@ flowchart LR
     end
     A --> Case_01 --> B
 ```
-###### 4.2.
+###### 3.3.
 ```mermaid
   flowchart LR
     subgraph TOP
@@ -90,15 +89,15 @@ flowchart LR
 
 
 
-### 2. [Graph](https://richwind.co.kr/147)
-##### case_1  
+##### 4. [Graph](https://richwind.co.kr/147)
+###### case_1  
 ```mermaid
   graph LR
 A(입력)-->B[연산]
 B-->C(출력)
 ```
 
-##### Case_2
+###### Case_2
 ```mermaid
   graph
     A[X-Mas] -->|Get Money| B(Go Shopping)
@@ -108,7 +107,7 @@ B-->C(출력)
     C -->|11| F[fa:fa-car Car]
 ```
 
-### 3. Sequence Diagram  
+##### 5. Sequence Diagram  
 ```mermaid
 %% Example of sequence diagram
   sequenceDiagram
@@ -123,7 +122,7 @@ B-->C(출력)
     end
 ```
 
-### 4. [Class](https://mermaid.live/edit#pako:eNptkslOwzAQhl8l8glEF5pAl4gLoq3EoafeUCQ0sSeJVS_FC1UpfXec0IYu-OKZb_yPxzPeEaoZkpRQAdZOOZQGZKaisJ4VlyCip-9uN5p6urqmc26ra_qGuYEznEZ3XLkISrzES2e4KqMSFUNzGqwldgEymDe3FwEJDo-wKbspb_cLojZpjrB60UKbNmA3XB6Fwf3wQFdHf3-ar35Ym69b1275F76qOaJrMQU1A_evvmnBX0G51iLi9n3DBWuh8arVkg6RaCRwFibR6DLiKpSYkTSYDAvwwmUkU_VR8E4vt4qS1BmPHeLXLHTkMLtzOGPcaUPSAoQNUGgIfSbpjrjtup56ya0LGalWBS9r7o0IuHJubdN-vw73Su4qn_eoln3LWQXGVZ-TYX8YD8cQJzgcJfCYJIzmg8m4iB8GBRvdD2Ig-32HYHP_4vDF6m3_A4gUwp0)
+##### 6. [class Diagram](https://mermaid.live/edit#pako:eNptkslOwzAQhl8l8glEF5pAl4gLoq3EoafeUCQ0sSeJVS_FC1UpfXec0IYu-OKZb_yPxzPeEaoZkpRQAdZOOZQGZKaisJ4VlyCip-9uN5p6urqmc26ra_qGuYEznEZ3XLkISrzES2e4KqMSFUNzGqwldgEymDe3FwEJDo-wKbspb_cLojZpjrB60UKbNmA3XB6Fwf3wQFdHf3-ar35Ym69b1275F76qOaJrMQU1A_evvmnBX0G51iLi9n3DBWuh8arVkg6RaCRwFibR6DLiKpSYkTSYDAvwwmUkU_VR8E4vt4qS1BmPHeLXLHTkMLtzOGPcaUPSAoQNUGgIfSbpjrjtup56ya0LGalWBS9r7o0IuHJubdN-vw73Su4qn_eoln3LWQXGVZ-TYX8YD8cQJzgcJfCYJIzmg8m4iB8GBRvdD2Ig-32HYHP_4vDF6m3_A4gUwp0)
 ```mermaid
   classDiagram
     Animal <|-- Duck
@@ -149,7 +148,7 @@ B-->C(출력)
 ```
 
 
-### 5. [state](https://mermaid.live/edit#pako:eNpdkDFvgzAQhf8KurGCEKAlCUOXJmOmjKXDBRtsyWBkn5EixH-vMaraxtPzd-d35zdDoxmHCiwh8bPEzmCfTHk9RP58vnxFSfIe3UgqtaEgA_TFZ3TVkxy6jW76-fkf-mHQio0G-WMKMfTc9CiZX2teG2ogwXteQ-Ul4y06RTXUw-Jb0ZG-PYYGKjKOx-BG9vuR__DCJGkDVYvKeqg0Mu6vM9BjXCPopCXv2Oihld3KnVEeC6LRVmm6lnedJOHuu0b3qZVMoCExncq0zMsj5gUvDwW-FQVr7tnp2OavWcsO-yxHWJYYeJh_3fIOsS_fJRN5Uw)
+##### 7. [state Diagram](https://mermaid.live/edit#pako:eNpdkDFvgzAQhf8KurGCEKAlCUOXJmOmjKXDBRtsyWBkn5EixH-vMaraxtPzd-d35zdDoxmHCiwh8bPEzmCfTHk9RP58vnxFSfIe3UgqtaEgA_TFZ3TVkxy6jW76-fkf-mHQio0G-WMKMfTc9CiZX2teG2ogwXteQ-Ul4y06RTXUw-Jb0ZG-PYYGKjKOx-BG9vuR__DCJGkDVYvKeqg0Mu6vM9BjXCPopCXv2Oihld3KnVEeC6LRVmm6lnedJOHuu0b3qZVMoCExncq0zMsj5gUvDwW-FQVr7tnp2OavWcsO-yxHWJYYeJh_3fIOsS_fJRN5Uw)
 ```mermaid
   stateDiagram-v2
     [*] --> Still
@@ -160,7 +159,8 @@ B-->C(출력)
     Crash --> [*]
 ```
 
-### 6. [ER](https://mermaid.live/edit#pako:eNp1klFvgjAUhf8Kuc8iEzdU3gyQxWSOBdDEhJdKL9AEqCnFxAD_fUUlmy7rW0-_nnNz720h4RTBBhQuI5kgZVxp6ji7MPK3XqD13XTatZrrfWz2XnDQ164beGGo2VpO6ie263Sdt5ofuOpia6eCJPgPs_nc-xvHU1QMBSPHArWUixhu9J-0J2eBCbLz6D16DVD3AyX8jOKO3LTfgL6JvK2iWJUUDR2tvgLf3TmR7qwj790PDuOXu351rSRh1SP_UN_oHAMXFAVSlREDTKBEURJGVbPb4XcMMscSYxhQiilpCjk0oFcoaSQPL1UCthQNTqA5USLxPqFH0aNMcgF2SopaiQUnKhTsFuTlNAw2Y7VUjqrulGWD3ohCybmUp9o2jOF5mjGZN8dpwkujZjQnQubnlWVYprUk5hytxZy8zec0Oc5Wy9R8naV08TIzCfT9BPCav71t0XWZ-m_B4LnJ)
+
+##### 8. [ER Diagram](https://mermaid.live/edit#pako:eNp1klFvgjAUhf8Kuc8iEzdU3gyQxWSOBdDEhJdKL9AEqCnFxAD_fUUlmy7rW0-_nnNz720h4RTBBhQuI5kgZVxp6ji7MPK3XqD13XTatZrrfWz2XnDQ164beGGo2VpO6ie263Sdt5ofuOpia6eCJPgPs_nc-xvHU1QMBSPHArWUixhu9J-0J2eBCbLz6D16DVD3AyX8jOKO3LTfgL6JvK2iWJUUDR2tvgLf3TmR7qwj790PDuOXu351rSRh1SP_UN_oHAMXFAVSlREDTKBEURJGVbPb4XcMMscSYxhQiilpCjk0oFcoaSQPL1UCthQNTqA5USLxPqFH0aNMcgF2SopaiQUnKhTsFuTlNAw2Y7VUjqrulGWD3ohCybmUp9o2jOF5mjGZN8dpwkujZjQnQubnlWVYprUk5hytxZy8zec0Oc5Wy9R8naV08TIzCfT9BPCav71t0XWZ-m_B4LnJ)
 ```mermaid
   erDiagram
     CUSTOMER }|..|{ DELIVERY : has
@@ -174,7 +174,7 @@ B-->C(출력)
 ```
 
 
-##### code
+##### 9. code
 
 <pre>
 <code>
@@ -186,7 +186,7 @@ B-->C(출력)
 
 
 
-### 📖 Gantt :fire:
+##### 10. 📖 Gantt :fire:
 
 ```mermaid
 gantt
@@ -215,11 +215,11 @@ gantt
 
 ### 1 칸 띄우기
 
-  
 [칸 띄우기](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbjKx6J%2FbtqIOarD9DF%2FxH33ypKG8Zyi7SGLQeT241%2Fimg.png)
 
 
 ### 2 형광색 처리
+
 <span style='background-color: #fff5b1'>Yellow</span>  
 <span style='background-color: #f6f8fa'>Gray</span>  
 <span style='background-color: #f1f8ff'>Blue</span>  
