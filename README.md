@@ -50,6 +50,12 @@ flowchart LR
   id4((circle))
   id5>asymmetric shape]
   id6{rhombus}  
+  id7{{hexagon}}
+  id8[/Parallelogram/]
+  id9[\Parallelogram\]
+  A[/Christmas\]
+  B[\Go shopping/]
+  C(((double circle)))
 ```  
 
 
