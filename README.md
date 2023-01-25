@@ -9,24 +9,14 @@
 [1. 킨띄우기](#1-칸-띄우기)  
 [2. 형광색 처리](#2-형광색-처리)  
 [3. 코딩 블록 입히기](#3-코딩-블록-입히기)  
-[4. 간트차트](#-Gantt)  
-[5. Diagram 구문](#Diagram-구문)  
+[4. 간트차트]()  
+[5. Diagram 구문](#Diagram-구문)
   
 --- 
 
-```mermaid
-gantt
-    title A Gantt Diagram
-    dateFormat  YY-MM-DD
-    section Section
-    A task           :a1, 2014-01-01, 30d
-    Another task     :after a1  , 20d
-    section Another
-    Task in sec      :2014-01-12  , 12d
-    another task      : 24d
-```
 
-### [Diagram 구문](https://mermaid.js.org/syntax/flowchart.html)  
+### Diagram 구문
+[Ref](https://mermaid.js.org/syntax/flowchart.html)  
 ##### 1. node and direction  
   - TD or TB : Top to bottom
   - BT : Buttom to top
@@ -100,6 +90,102 @@ flowchart LR
 
 
 
+### 2. [Graph](https://richwind.co.kr/147)
+##### case_1  
+```mermaid
+  graph LR
+A(입력)-->B[연산]
+B-->C(출력)
+```
+
+##### Case_2
+```mermaid
+  graph
+    A[X-Mas] -->|Get Money| B(Go Shopping)
+    B --> C{Decision}
+    C -->|01| D[Laptop]
+    C -->|10| E[iPhone]
+    C -->|11| F[fa:fa-car Car]
+```
+
+### 3. Sequence Diagram  
+```mermaid
+%% Example of sequence diagram
+  sequenceDiagram
+    Alice->>Bob: Hello Bob, how are you?
+    alt is sick
+    Bob->>Alice: Not so good :(
+    else is well
+    Bob->>Alice: Feeling fresh like a daisy
+    end
+    opt Extra response
+    Bob->>Alice: Thanks for asking
+    end
+```
+
+### 4. [Class](https://mermaid.live/edit#pako:eNptkslOwzAQhl8l8glEF5pAl4gLoq3EoafeUCQ0sSeJVS_FC1UpfXec0IYu-OKZb_yPxzPeEaoZkpRQAdZOOZQGZKaisJ4VlyCip-9uN5p6urqmc26ra_qGuYEznEZ3XLkISrzES2e4KqMSFUNzGqwldgEymDe3FwEJDo-wKbspb_cLojZpjrB60UKbNmA3XB6Fwf3wQFdHf3-ar35Ym69b1275F76qOaJrMQU1A_evvmnBX0G51iLi9n3DBWuh8arVkg6RaCRwFibR6DLiKpSYkTSYDAvwwmUkU_VR8E4vt4qS1BmPHeLXLHTkMLtzOGPcaUPSAoQNUGgIfSbpjrjtup56ya0LGalWBS9r7o0IuHJubdN-vw73Su4qn_eoln3LWQXGVZ-TYX8YD8cQJzgcJfCYJIzmg8m4iB8GBRvdD2Ig-32HYHP_4vDF6m3_A4gUwp0)
+```mermaid
+  classDiagram
+    Animal <|-- Duck
+    Animal <|-- Fish
+    Animal <|-- Zebra
+    Animal : + int age
+    Animal : + String gender
+    Animal : +isMamal()
+    Animal : +mate()
+    class Duck{
+      +String beakColor
+      +swim()
+      +quack()
+    }
+    class Fish{
+      -int sizeInFeet
+      -canEat()
+    }
+    class Zebra{
+      +bool is_wild
+      +run()
+    }
+```
+
+
+### 5. [state](https://mermaid.live/edit#pako:eNpdkDFvgzAQhf8KurGCEKAlCUOXJmOmjKXDBRtsyWBkn5EixH-vMaraxtPzd-d35zdDoxmHCiwh8bPEzmCfTHk9RP58vnxFSfIe3UgqtaEgA_TFZ3TVkxy6jW76-fkf-mHQio0G-WMKMfTc9CiZX2teG2ogwXteQ-Ul4y06RTXUw-Jb0ZG-PYYGKjKOx-BG9vuR__DCJGkDVYvKeqg0Mu6vM9BjXCPopCXv2Oihld3KnVEeC6LRVmm6lnedJOHuu0b3qZVMoCExncq0zMsj5gUvDwW-FQVr7tnp2OavWcsO-yxHWJYYeJh_3fIOsS_fJRN5Uw)
+```mermaid
+  stateDiagram-v2
+    [*] --> Still
+    Still --> [*]
+    Still --> Moving
+    Moving --> Still
+    Moving --> Crash
+    Crash --> [*]
+```
+
+### 6. [ER](https://mermaid.live/edit#pako:eNp1klFvgjAUhf8Kuc8iEzdU3gyQxWSOBdDEhJdKL9AEqCnFxAD_fUUlmy7rW0-_nnNz720h4RTBBhQuI5kgZVxp6ji7MPK3XqD13XTatZrrfWz2XnDQ164beGGo2VpO6ie263Sdt5ofuOpia6eCJPgPs_nc-xvHU1QMBSPHArWUixhu9J-0J2eBCbLz6D16DVD3AyX8jOKO3LTfgL6JvK2iWJUUDR2tvgLf3TmR7qwj790PDuOXu351rSRh1SP_UN_oHAMXFAVSlREDTKBEURJGVbPb4XcMMscSYxhQiilpCjk0oFcoaSQPL1UCthQNTqA5USLxPqFH0aNMcgF2SopaiQUnKhTsFuTlNAw2Y7VUjqrulGWD3ohCybmUp9o2jOF5mjGZN8dpwkujZjQnQubnlWVYprUk5hytxZy8zec0Oc5Wy9R8naV08TIzCfT9BPCav71t0XWZ-m_B4LnJ)
+```mermaid
+  erDiagram
+    CUSTOMER }|..|{ DELIVERY : has
+    CUSTOMER ||--o{ Order : place
+    CUSTOMER ||--o{ INVOICE : "liable for"
+    DELIVERY ||--o{ Order : receives
+    INVOICE ||--|{ Order : covers
+    Order ||--|{ Order-ITEM : includes
+    PRODUCT-CATEGORY ||--|{ PRODUCT : contains
+    PRODUCT ||--o{ Order-ITEM : "ordered in"
+```
+
+
+##### code
+
+<pre>
+<code>
+    test....
+    
+</code>
+</pre>
+  
+
+
+
 ### 📖 Gantt :fire:
 
 ```mermaid
@@ -130,7 +216,7 @@ gantt
 ### 1 칸 띄우기
 
   
-![칸틔우기](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbjKx6J%2FbtqIOarD9DF%2FxH33ypKG8Zyi7SGLQeT241%2Fimg.png)
+[칸 띄우기](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbjKx6J%2FbtqIOarD9DF%2FxH33ypKG8Zyi7SGLQeT241%2Fimg.png)
 
 
 ### 2 형광색 처리
@@ -148,15 +234,6 @@ gantt
     ㅁ In: buf  
     ㅁ Format:  
 
-
-### 4 목차, 주석, 각주  
-#### 목차  
-: \{:toc}  
-#### 주석  
-: \\<!-- & -->  
-#### 각주 
-각주[^14]  
-  
 
 ### 수식
 #### latex 적용
@@ -210,14 +287,13 @@ public class BootSpringBootApplication {
 ```
 
 
-### 5 강조 (Emphasis) : \* or \_
-
 ### 7 목록 (List)
 7.1 번호 목록 (Ordered List)
 - 숫자와 점을 이용하여 목록 생성
 
 7.2 기호 목록 (Unordered List)
 -,+,\*을 사용해 기호 목록 생성, 계층별로 나누고 싶으면 tab을 삽입
+
 
 ### 8 링크 (Link)  
 8.1 외부 링크 (External Link)  
@@ -228,14 +304,15 @@ public class BootSpringBootApplication {
 URL 링크 : <example.com/> & <example@example.com>  
 8.2 내부 링크 (Internal Link)  
 
+
 ### 9 표 (Table)  
-9.2 표의 정렬 (Alignment)  
-정렬하기 위해서는 : 를 헤더의 양쪽 혹은 한쪽에 삽입  
-9.3 열 병합 (Column spanning)  
+9.1 정렬 (Alignment)  
+  - ':' 를 헤더의 양쪽 혹은 한쪽에 삽입
+  -   
+9.2 열 병합 (Column spanning)  
 | Column 1 | Column 2 | Column 3 | Column 4 |  
 | -------- | :------: | -------- | -------- |  
 | No span  | Span across three columns    |||  
-
 
 <table>
    <tbody>
@@ -258,15 +335,16 @@ URL 링크 : <example.com/> & <example@example.com>
    </tbody>
 </table>
 
+
 ### 10 이미지 (Image) 
 : `![이미지 이름](이미지 주소)`  
+
 
 ### 11 이스케이프(Backslash Escape) 
 : \\  
 마크다운 작성 중 \*이나 \_ 을 사용하고 싶은 경우, 해당 기호 앞에 \\를 삽입  
 
-### 14. 각주 
-: [\^myfootnote]  
-
+### 14. 각주  
+각주[^14]  
 
 [^14]: 1234567890
