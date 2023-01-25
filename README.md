@@ -44,8 +44,8 @@ flowchart TD
 ##### 2. Node shapes
 ```mermaid
 flowchart LR
-  id1(This is the text in the box)
-  id2[[This is the text in the box]]
+  id1(Rectangle_box)
+  id2[[box]]
   id3[(cylindrical shape, Database)]
   id4((circle))
   id5>asymmetric shape]
