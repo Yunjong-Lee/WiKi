@@ -21,14 +21,16 @@
   + CFAR : 수신신호의 잡음 레벨을 계산하여 잡음, 클러터, 간섭 등의 영향에 대응하여 표적을 감지하는 역할  
 
 
-- - -
+---
 
-### [Range Doppler Detection for automotive FMCW Radars](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4405477), Proceedings of the 37th European Microwave Conference, infineon technology
+
+### [Range Doppler Detection for automotive FMCW Radars](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4405477)
+- Ref : Proceedings of the 37th European Microwave Conference, infineon technology   
 
 - tx와 rx 신호간의 difference는 downconversion 후에 결정  
   하나의 주파수 램프에서 추출된 정보로부터 range와 velocity를 함께 검출하는 것은 불완전하다. 불완전을 제거하기 위해 후속 램프들을 생성해야 한다.  
   
-- range와 velocity 추출 method: 
+- range와 velocity 추출 method  
   + FFT
   + CFAR  
   
