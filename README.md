@@ -230,12 +230,21 @@ gantt
 
 
 ### 3 코딩 블록 입히기
+#### coding block
 
     ㅁ In: buf  
     ㅁ Format:  
 
+#### struct.unpack option
+| format | bytes |  
+| ------ | -------- |  
+| x, c, b, B | 1 |  
+| s, p | 1 |  
+| h, H | 2 |
+| i, I, l, L, f | 4 |
+| d,  | 8 |
 
-### 수식
+### 4 수식
 #### latex 적용
 a. latex.codecogs.com 홈페이지 접속
 b. 변환하고자 하는 수식 입력
