@@ -359,5 +359,5 @@ html<sup>[1](#footnote_1)</sup>
 각주[^14]  
 
 
-<a name="footnote_1">1</a>: 주석에 관한 설명을 이곳에...
+<a name="footnote_1">1</a>: 주석에 관한 설명  
 [^14]: 1234567890
