@@ -10,26 +10,14 @@
 [2. 형광색 처리](#2-형광색-처리)  
 [3. 코딩 블록 입히기](#3-코딩-블록-입히기)  
 [4. 간트차트](#4-Gantt-Chart)  
-[5. Diagram 구문](#5-Diagram-구문)
+[5. Diagram 구문](#5-Diagram-구문)  
+
   
 --- 
 
 
-### 5. Diagram 구문
-[Ref](https://mermaid.js.org/syntax/flowchart.html)  
-##### 1. node and direction  
-  - TD or TB : Top to bottom
-  - BT : Buttom to top
-  - LR : Left to right
-  - RL : Right to Left
+### 5. [Diagram 구문](https://mermaid.js.org/syntax/flowchart.html)  
 
-```mermaid
----
-title: Node
----
-flowchart TD
-    start-->stop
-```
 
 ##### 2. Node shapes
 ```mermaid
