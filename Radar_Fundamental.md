@@ -1,20 +1,30 @@
 
 # Index  
 
-[1. Doppler Effect](#1-Doppler-Effect)  
-[2. Fast Fourier Transform](#2-Fast-Fourier-Transform)  
+[1. FMCW Radar 개요](#1-FMCW-Radar-개요)  
+[2. Doppler Effect](#2-Doppler-Effect)  
+[3. Fast Fourier Transform](#3-Fast-Fourier-Transform)  
 
 
+</br>
 
-## 1. Doppler Effect
+
+## 1. FMCW Radar 개요
+- Rarget에 전송한 신호(송신 신호)와 반사되어 되돌아 오는 신호(수신 신호)의 추파수 라이를 이용하여 거리를 측정
+- 송신 신호는 변조신호에 의해 선형적으로 변화
+- 수신 신호는 $tau_d(= 2R / c)의 시간 차를 가지며, 송신 신호와 혼합됨(시간 차는 두 신호간 주파수 차이로 대체되며, 주파수 차이를 비트 주파수라 한다. 이 비트 주파수를 거리 측정에 이용)
+- 비트 신호는 A/D를 거쳐 DMA를 통해 DSP로 전송(FFT를 통해 얻어진 비트스펙트럼에서 최대값을 찾아 거리로 환산)  
+
+</br>  
+## 2. Doppler Effect  
 - 21.12.10
 
-### 1.1. 정의  
+### 2.1. 정의  
 음파 또는 전파의 발생지/수신지가 다가오거나 멀어짐에 따라 수신 주파수가 변화하는 현상  
 : 발생점,관측점이 다가올 때 → 수신 주파수가 높아짐  
 : 발생점,관측점이 멀어질 때 → 수신 주파수가 낮아짐  
 
-### 1.2. 관계식  
+### 2.2. 관계식  
   - 도플러 효과 관계식 - 1차원 직선 관계  
     : 이동 파원, 이동 관측자 일 때,  
      ![img](http://www.ktword.co.kr/img_data/2621_4.JPG)  
@@ -41,7 +51,7 @@
     : 무선단말 이동에 따른 도플러 효과에 의해 주파수 변동 특성  ☞ 도플러확산 참조  
      - 다중경로 채널의 시변(時變) 특성 => 도플러 확산 (Doppler Spread) 또는 주파수 분산 초래  
   
-### 1.3. 도플러 효과에 의한 주파수 변동  
+### 2.3. 도플러 효과에 의한 주파수 변동  
   - 정의  
     . 도플러 천이 (Doppler Shift, Frequency Shift): 무선통신에서 도플러 효과(Doppler Effect)에 따른 겉보기 주파수의 천이/편이  
     . 도플러 주파수 옵셋 (Doppler Frequency Offset): 레이더 등에서의 송신,수신 주파수 간의 차이/편차  
@@ -64,10 +74,10 @@
 
 ---
 
-## 2. Fast Fourier Transform  
+## 3. Fast Fourier Transform  
 - 22.01.21  
 
-### 2.1. DFT
+### 3.1. DFT
  
 	X[k] = x[0](W_N)^0 + x[1](W_N)^k + ... + x[n-1](W_N)^(n-1)k, (k = 0, 1, ~ n-1)  
 	
@@ -77,7 +87,7 @@
 	- 회전인자 관련 계산 항의 수 : 0 < kn <= (n-1)^2  
 	  + 회전인자의 대칭성 및 주기성을 이용하여 계산량을 줄일 수 있음. 단위 원을 한바퀴 도는데 필요한 서로 다른 N개의 값만 계산  
 
-### 2.2. FFT 
+### 3.2. FFT 
 DFT의 상수 및 동작의 대칭성을 이용하여 계산량을 감소  
 - DFT를 길이가 짧은 여러 DFT로 계속 분할시켜 곱셈 량을 N에 비례하도록 함  
   . x[n]을 짧은 길이의 신호로 분할
@@ -89,11 +99,11 @@ DFT의 상수 및 동작의 대칭성을 이용하여 계산량을 감소
 - [FFT 알고리듬 분류](http://www.ktword.co.kr/test/view/view.php?m_temp1=2596&id=1276)
 
 
-### 2.3. window function  
+### 3.3. window function  
 
 [불연속에 의한 스펙트럼의 왜곡을 막기 위한 방법으로, 데이터에 컨볼루션 연산을 하는 방법과 데이터에 window function을 곱하는 방법이 있다](https://paeton.tistory.com/entry/Window-Function%EC%9D%84-%EC%93%B0%EB%8A%94-%EC%9D%B4%EC%9C%A0)
 
-  #### 2.3.1. 데이터에 컨볼루션
+  #### 3.3.1. 데이터에 컨볼루션
   윈도우 함수 자체를 하나의 filter로 사용(대부분의 window function은 주파수축에서 low-pass filter형태)되며, 신호 자체가 smoothing 된다.  
     + $*$ s'(t)=s(t)\ast w(t) $*$   
 
@@ -117,6 +127,8 @@ DFT의 상수 및 동작의 대칭성을 이용하여 계산량을 감소
 	+ 이보다 작은 프레임 크기를 사용하면 한 피치 주기보다 짧은 음성신호만을 포함할 수 있으며, 프레임 길이가 더 길어지면   
 	+ 한 프레임내에 서로 다른 음소 부분이 혼합되는 경우가 자주 발생하여 음성신호의 특징을 제대로 표현할 수가 없습니다.  
 	+ Hanning  
+
+
 
 
 ---  
