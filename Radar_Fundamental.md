@@ -5,15 +5,15 @@
 
 
 
-# Doppler effect
+## 1. Doppler effect
 - 21.12.10
 
-## 정의  
+### 정의  
 음파 또는 전파의 발생지/수신지가 다가오거나 멀어짐에 따라 수신 주파수가 변화하는 현상  
 : 발생점,관측점이 다가올 때 → 수신 주파수가 높아짐  
 : 발생점,관측점이 멀어질 때 → 수신 주파수가 낮아짐  
 
-## 관계식  
+### 관계식  
   - 도플러 효과 관계식 - 1차원 직선 관계  
     : 이동 파원, 이동 관측자 일 때,  
      ![img](http://www.ktword.co.kr/img_data/2621_4.JPG)  
@@ -63,10 +63,10 @@
 
 ---
 
-# Fast Fourier Transform  
+## Fast Fourier Transform  
 - 22.01.21  
 
-## DFT
+### DFT
  
 	X[k] = x[0](W_N)^0 + x[1](W_N)^k + ... + x[n-1](W_N)^(n-1)k, (k = 0, 1, ~ n-1)  
 	
@@ -76,7 +76,7 @@
 	- 회전인자 관련 계산 항의 수 : 0 < kn <= (n-1)^2  
 	  + 회전인자의 대칭성 및 주기성을 이용하여 계산량을 줄일 수 있음. 단위 원을 한바퀴 도는데 필요한 서로 다른 N개의 값만 계산  
 
-## FFT 
+### FFT 
 DFT의 상수 및 동작의 대칭성을 이용하여 계산량을 감소  
 - DFT를 길이가 짧은 여러 DFT로 계속 분할시켜 곱셈 량을 N에 비례하도록 함  
   . x[n]을 짧은 길이의 신호로 분할
@@ -88,14 +88,15 @@ DFT의 상수 및 동작의 대칭성을 이용하여 계산량을 감소
 - [FFT 알고리듬 분류](http://www.ktword.co.kr/test/view/view.php?m_temp1=2596&id=1276)
 
 
-## window function  
+### window function  
 
 [불연속에 의한 스펙트럼의 왜곡을 막기 위한 방법으로, 데이터에 컨볼루션 연산을 하는 방법과 데이터에 window function을 곱하는 방법이 있다](https://paeton.tistory.com/entry/Window-Function%EC%9D%84-%EC%93%B0%EB%8A%94-%EC%9D%B4%EC%9C%A0)
 
-  ### 데이터에 컨볼루션
+  #### 데이터에 컨볼루션
   윈도우 함수 자체를 하나의 filter로 사용(대부분의 window function은 주파수축에서 low-pass filter형태)되며, 신호 자체가 smoothing 된다.  
     + $*$ s'(t)=s(t)\ast w(t) $*$   
-  ### 데이터에 window function을 곱셈(시간축에서 신호에 윈도우를 곱했음)
+
+  #### 데이터에 window function을 곱셈(시간축에서 신호에 윈도우를 곱했음)
   시간축에서의 곱셈은 주파수 축에서의 컨볼루션(퓨리에변환)  
       └─ 주파수축의 스펙트럼을 filtering  
     + $*$ s'(t)=s(t)\cdot w(t) $*$  
