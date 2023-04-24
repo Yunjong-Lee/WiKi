@@ -1,11 +1,12 @@
 
-# Index
-1. [Fast FOurier Transfrm](# Fast-FOurier-Transfrm)
-2. [Doppler Effect](# Doppler-Effect)
+# Index  
+
+[2. Fast Fourier Transform](#2-Fast-Fourier-Transform)  
+[1. Doppler Effect](#1-Doppler-Effect)  
 
 
 
-## 1. Doppler effect
+## 1. Doppler Effect
 - 21.12.10
 
 ### 정의  
@@ -63,7 +64,7 @@
 
 ---
 
-## Fast Fourier Transform  
+## 2. Fast Fourier Transform  
 - 22.01.21  
 
 ### DFT
