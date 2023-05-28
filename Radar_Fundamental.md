@@ -8,15 +8,19 @@
 
 </br>
 ```mermaid
-journey
-    title My working day
-    section Go to work
-      Make tea: 5: Me
-      Go upstairs: 3: Me
-      Do work: 1: Me, Cat
-    section Go home
-      Go downstairs: 5: Me
-      Sit down: 5: Me
+flowchart LR
+  id1(Rectangle_box)
+  id2[[box]]
+  id3[(cylindrical shape, Database)]
+  id4((circle))
+  id5>asymmetric shape]
+  id6{rhombus}  
+  id7{{hexagon}}
+  id8[/Parallelogram/]
+  id9[\Parallelogram\]
+  A[/Christmas\]
+  B[\Go shopping/]
+  C(((double circle)))
 ```
 
 
