@@ -22,8 +22,6 @@
   + VCO의 Sweep 대역폭을 크게 할 수록 거리 해상도 개선(변조된 VCO의 출력주파수는 비선형 특성을 가지기 때문에 거리해상도를 개선시키는데 비용이 추가되어야 한다.)
   + 대안: Time Gating 방법(DSP) 등이 제시 됨  
 
-[Index](#-Index)  
-
 </br>  
 
 # 2. Doppler Effect  
@@ -82,7 +80,9 @@
     - fDmax : 최대도플러주파수천이, v :이동 속도, c : 빛 속도, fo: 전송 주파수  
     - 최대 도플러 천이는, 전송 주파수 및 이동 속도가 커질수록 커지게 됨 
     - 
-[Index](#-Index)  
+
+</br>
+
 ---
 
 # 3. Fast Fourier Transform  
@@ -139,17 +139,14 @@ DFT의 상수 및 동작의 대칭성을 이용하여 계산량을 감소
 	+ 한 프레임내에 서로 다른 음소 부분이 혼합되는 경우가 자주 발생하여 음성신호의 특징을 제대로 표현할 수가 없습니다.  
 	+ Hanning  
 	
-[Index](#-Index)  
 </br>
 
 # 4. Beamforming
 
-[Index](#-Index)  
 </br>
 
 # 5. Steering vector
 
-[Index](#-Index)  
 ---  
 
 [3] S. He and M. Torkelson, “A new approach to pipelined FFT processor”, IPPS’96, pp.766-770, 1996.  
