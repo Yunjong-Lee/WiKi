@@ -273,6 +273,16 @@ d. 복사된 이미지 url을 마크다운으로 임베딩
 
 [Ref.](https://www.math.brown.edu/johsilve/ReferenceCards/TeXRefCard.v1.5.pdf)
 
+##### 괄호 (Parentheses)  
+  - 소괄호  $(1 + 2)$ :   $ (1 + 2) $  
+  - 중괄호  $\lbrace1 + 2\rbrace$ : $ \lbrace1 + 2\rbrace $
+  - 대괄호  $[1 + 2]$ : $ [1 + 2] $  
+  - 괄호 자동 리사이징 $\left( \frac{2}{3} \right)$ : $ \left( \frac{2}{3} \right) $  
+  - $\Bigg( \bigg( \Big( \big( ( ) \big) \Big) \bigg) \Bigg)$ : $ \Bigg( \bigg( \Big( \big( ( ) \big) \Big) \bigg) \Bigg) $
+
+
+  - 
+
 
 ### 5. 각주  
 각주[^각주]  
