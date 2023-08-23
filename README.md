@@ -263,8 +263,6 @@ d. 복사된 이미지 url을 마크다운으로 임베딩
 #### Tex 적용
 ![editRules_tex](https://user-images.githubusercontent.com/54181684/183279212-5b1cdae9-23e0-4a63-a466-5111739c1dcd.png)
 
-
-
 [Ref.](https://www.math.brown.edu/johsilve/ReferenceCards/TeXRefCard.v1.5.pdf)
 
 
