@@ -40,17 +40,16 @@ journey
       Go downstairs: 5: Me
       Sit down: 5: Me
 ```
---- 
   
-journey  
-    title My working day  
-    section Go to work  
-      Make tea: 5: Me  
-      Go upstairs: 3: Me  
-      Do work: 1: Me, Cat  
-    section Go home  
-      Go downstairs: 5: Me  
-      Sit down: 5: Me  
+    journey  
+        title My working day  
+        section Go to work  
+          Make tea: 5: Me  
+          Go upstairs: 3: Me  
+          Do work: 1: Me, Cat  
+        section Go home  
+          Go downstairs: 5: Me  
+          Sit down: 5: Me  
 
 
 
@@ -73,6 +72,20 @@ flowchart LR
   C(((double circle)))
 ```  
 
+    flowchart LR
+      id1(Rectangle_box)
+      id2[[box]]
+      id3[(cylindrical shape, Database)]
+      id4((circle))
+      id5>asymmetric shape]
+      id6{rhombus}  
+      id7{{hexagon}}
+      id8[/Parallelogram/]
+      id9[\Parallelogram\]
+      A[/Christmas\]
+      B[\Go shopping/]
+      C(((double circle)))
+  
 ### 3. Flowchart
 ###### 3.1.
 ```mermaid
@@ -85,7 +98,19 @@ flowchart LR
     click B "https://www.github.com" "Open this in a new tab" _blank
     click C href "https://www.github.com" _blank
     click D href "https://www.github.com" "Open this in a new tab" _blank
-```  
+```
+
+    flowchart LR
+      A-->B
+      B-->C
+      C-->D
+      D-->E
+      click A "https://www.github.com" _blank
+      click B "https://www.github.com" "Open this in a new tab" _blank
+      click C href "https://www.github.com" _blank
+      click D href "https://www.github.com" "Open this in a new tab" _blank
+
+
 ###### 3.2.
 ```mermaid
   flowchart LR
@@ -94,6 +119,14 @@ flowchart LR
     end
     A --> Case_01 --> B
 ```
+
+    flowchart LR
+      subgraph Case_01
+        B1 --> B2
+      end
+      A --> Case_01 --> B
+
+    
 ###### 3.3.
 ```mermaid
   flowchart LR
@@ -112,6 +145,20 @@ flowchart LR
     B1 --> B2
 ```
 
+    flowchart LR
+      subgraph TOP
+        direction TB
+        subgraph B1
+            direction RL
+            i1 -->f1
+        end
+        subgraph B2
+            direction BT
+            i2 -->f2
+        end
+      end
+      A --> TOP --> B
+      B1 --> B2
 
 
 ### 4. [Graph](https://richwind.co.kr/147)
@@ -122,6 +169,10 @@ A(입력)-->B[연산]
 B-->C(출력)
 ```
 
+    graph LR
+      A(입력)-->B[연산]
+      B-->C(출력)
+
 ###### Case_2
 ```mermaid
   graph
@@ -131,6 +182,13 @@ B-->C(출력)
     C -->|10| E[iPhone]
     C -->|11| F[fa:fa-car Car]
 ```
+
+    graph
+      A[X-Mas] -->|Get Money| B(Go Shopping)
+      B --> C{Decision}
+      C -->|01| D[Laptop]
+      C -->|10| E[iPhone]
+      C -->|11| F[fa:fa-car Car]
 
 ### 5. Sequence Diagram  
 ```mermaid
@@ -146,6 +204,17 @@ B-->C(출력)
     Bob->>Alice: Thanks for asking
     end
 ```
+
+    sequenceDiagram
+      Alice->>Bob: Hello Bob, how are you?
+      alt is sick
+      Bob->>Alice: Not so good :(
+      else is well
+      Bob->>Alice: Feeling fresh like a daisy
+      end
+      opt Extra response
+      Bob->>Alice: Thanks for asking
+      end
 
 ### 6. [class Diagram](https://mermaid.live/edit#pako:eNptkslOwzAQhl8l8glEF5pAl4gLoq3EoafeUCQ0sSeJVS_FC1UpfXec0IYu-OKZb_yPxzPeEaoZkpRQAdZOOZQGZKaisJ4VlyCip-9uN5p6urqmc26ra_qGuYEznEZ3XLkISrzES2e4KqMSFUNzGqwldgEymDe3FwEJDo-wKbspb_cLojZpjrB60UKbNmA3XB6Fwf3wQFdHf3-ar35Ym69b1275F76qOaJrMQU1A_evvmnBX0G51iLi9n3DBWuh8arVkg6RaCRwFibR6DLiKpSYkTSYDAvwwmUkU_VR8E4vt4qS1BmPHeLXLHTkMLtzOGPcaUPSAoQNUGgIfSbpjrjtup56ya0LGalWBS9r7o0IuHJubdN-vw73Su4qn_eoln3LWQXGVZ-TYX8YD8cQJzgcJfCYJIzmg8m4iB8GBRvdD2Ig-32HYHP_4vDF6m3_A4gUwp0)
 ```mermaid
@@ -172,18 +241,46 @@ B-->C(출력)
     }
 ```
 
+    classDiagram
+      Animal <|-- Duck
+      Animal <|-- Fish
+      Animal <|-- Zebra
+      Animal : + int age
+      Animal : + String gender
+      Animal : +isMamal()
+      Animal : +mate()
+      class Duck{
+        +String beakColor
+        +swim()
+        +quack()
+      }
+      class Fish{
+        -int sizeInFeet
+        -canEat()
+      }
+      class Zebra{
+        +bool is_wild
+        +run()
+      }
+
 
 ### 7. [state Diagram](https://mermaid.live/edit#pako:eNpdkDFvgzAQhf8KurGCEKAlCUOXJmOmjKXDBRtsyWBkn5EixH-vMaraxtPzd-d35zdDoxmHCiwh8bPEzmCfTHk9RP58vnxFSfIe3UgqtaEgA_TFZ3TVkxy6jW76-fkf-mHQio0G-WMKMfTc9CiZX2teG2ogwXteQ-Ul4y06RTXUw-Jb0ZG-PYYGKjKOx-BG9vuR__DCJGkDVYvKeqg0Mu6vM9BjXCPopCXv2Oihld3KnVEeC6LRVmm6lnedJOHuu0b3qZVMoCExncq0zMsj5gUvDwW-FQVr7tnp2OavWcsO-yxHWJYYeJh_3fIOsS_fJRN5Uw)
 ```mermaid
-  stateDiagram-v2
+stateDiagram-v2
     [*] --> Still
     Still --> [*]
     Still --> Moving
     Moving --> Still
     Moving --> Crash
     Crash --> [*]
-```
-
+```  
+    stateDiagram-v2
+      [*] --> Still
+      Still --> [*]
+      Still --> Moving
+      Moving --> Still
+      Moving --> Crash
+      Crash --> [*]
 
 ### 8. [ER Diagram](https://mermaid.live/edit#pako:eNp1klFvgjAUhf8Kuc8iEzdU3gyQxWSOBdDEhJdKL9AEqCnFxAD_fUUlmy7rW0-_nnNz720h4RTBBhQuI5kgZVxp6ji7MPK3XqD13XTatZrrfWz2XnDQ164beGGo2VpO6ie263Sdt5ofuOpia6eCJPgPs_nc-xvHU1QMBSPHArWUixhu9J-0J2eBCbLz6D16DVD3AyX8jOKO3LTfgL6JvK2iWJUUDR2tvgLf3TmR7qwj790PDuOXu351rSRh1SP_UN_oHAMXFAVSlREDTKBEURJGVbPb4XcMMscSYxhQiilpCjk0oFcoaSQPL1UCthQNTqA5USLxPqFH0aNMcgF2SopaiQUnKhTsFuTlNAw2Y7VUjqrulGWD3ohCybmUp9o2jOF5mjGZN8dpwkujZjQnQubnlWVYprUk5hytxZy8zec0Oc5Wy9R8naV08TIzCfT9BPCav71t0XWZ-m_B4LnJ)
 ```mermaid
@@ -197,6 +294,16 @@ B-->C(출력)
     PRODUCT-CATEGORY ||--|{ PRODUCT : contains
     PRODUCT ||--o{ Order-ITEM : "ordered in"
 ```
+
+    erDiagram
+      CUSTOMER }|..|{ DELIVERY : has
+      CUSTOMER ||--o{ Order : place
+      CUSTOMER ||--o{ INVOICE : "liable for"
+      DELIVERY ||--o{ Order : receives
+      INVOICE ||--|{ Order : covers
+      Order ||--|{ Order-ITEM : includes
+      PRODUCT-CATEGORY ||--|{ PRODUCT : contains
+      PRODUCT ||--o{ Order-ITEM : "ordered in"
 
 
 ### 4. Gantt Chart  
@@ -225,6 +332,26 @@ gantt
     결과 이미지저장,공유  : a3,after a2, 2d
     스티커 기능  : a4,after a3, 2d
 ```
+    gantt  
+        title A Gantt Diagram  
+        dateFormat  YY-MM-DD  
+        section AI  
+        AI 기술테스트  : a1, 20-10-14, 10d  
+        가상 얼굴 학습 및 환경세팅  : 20-10-14, 10d  
+        얼굴 인식 개선 및 적용 : after a1, 10d  
+        가상 얼굴 이미지 생성 및 분류 : after a1, 4d  
+    
+        section Front-end
+        와이어프레임     :a1,20-10-14  , 10d
+        react 학습 및 적용 : after a1,  10d
+        사진 업로드 및 설정 기능 :after a1 , 10d
+    
+        section Back-end
+        django 학습 및 적용 : a1,20-10-14 , 10d
+        회원기능      :a2,after a1 , 10d
+        친구기능      :after a1  ,10d
+        결과 이미지저장,공유  : a3,after a2, 2d
+        스티커 기능  : a4,after a3, 2d
 
 
 # Text
