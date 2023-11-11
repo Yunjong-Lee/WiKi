@@ -413,15 +413,73 @@ d. 복사된 이미지 url을 마크다운으로 임베딩
 
 [Ref.](https://www.math.brown.edu/johsilve/ReferenceCards/TeXRefCard.v1.5.pdf)
 
-##### 괄호 (Parentheses)  
-  - 소괄호  $(1 + 2)$ :   $ (1 + 2) $  
-  - 중괄호  $\lbrace1 + 2\rbrace$ : $ \lbrace1 + 2\rbrace $
-  - 대괄호  $[1 + 2]$ : $ [1 + 2] $  
-  - 괄호 자동 리사이징 $\left( \frac{2}{3} \right)$ : $ \left( \frac{2}{3} \right) $  
-  - $\Bigg( \bigg( \Big( \big( ( ) \big) \Big) \bigg) \Bigg)$ : $ \Bigg( \bigg( \Big( \big( ( ) \big) \Big) \bigg) \Bigg) $
 
+#### 4.3 [LaTex문법](https://khw11044.github.io/blog/blog-etc/2020-12-21-markdown-tutorial2/)
+- 사칙연산  
+  + $1 + 1 = 2$ : ``` $$1 + 1 = 2$$ ```
+  + $2 - 1 = 1$ : ``` $$2 - 1 = 1$$ ```
+  + $2 \times 2 = 4$ : ``` $$2 \times 2 = 4$$ ```
+  + $4 \div 2 = 2$ : ``` $$4 \div 2 = 2$$ ```
+  + $\frac{1}{2}$ : ``` $$\frac{1}{2}$$ ```
+  + $^1/_2$ : ``` $$^1/_2$$ ```
+    
+- 수학 공식
+  + $X_{1,j} \mathbf{F}X_{2,j}  = 0, \tag{1}$ : ``` $$X_{1,j} \mathbf{F}X_{2,j}  = 0, \tag{1}$$ ```
+    
+- 첨자
+  + $2^2=4$ : ``` $$2^2=4$$ ```
+  + $a_1, a_2, a_3$ : ``` $$a_1, a_2, a_3$$ ```
+     
+- 특수문자
+  + $\sqrt{2}$ : ``` $$\sqrt{2}$$ ```
+  + $n!$ : ``` $$n!$$ ```
+    ```
+    -. $n! = 1 \times 2 \times 3 \times \ldots n$  
+    -. $n! = \prod_{k=1}^n k$ ```
+  + $\pi$ : ``` $$\pi$$ ``` 
+    ```
+    -. $\pi$ ~$$\pi$$  
+    -. $\Pi$ ~$$\Pi$$  
+    -. $\phi$ ~$$\phi$$ ```
+  + 각도 : ``` $$90^\circ$$ ```
+  + limit : $\lim_{x \to \infty} \exp(-x) = 0$ ``` $$\lim_{x \to \infty} \exp(-x) = 0$$ ```  
+  + 시그마 : $\sum_{i=1}^{10} t_i$ ``` $$\displaystyle\sum_{i=1}^{10} t_i$$ ```
+  + log : $\log_b a$ ``` $$\log_b a$$ ```
+  + 미분 : $\dv{Q}{t} = \dv{s}{t}$ ``` $$\dv{Q}{t} = \dv{s}{t}$$ ``` 
+  + 적분 : $\int_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x$
+        ``` $$\int_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x$$
+        $$\int\limits_a^b$$ ```
+    
+- 괄호 (Parentheses)  
+  + 소괄호  $(1 + 2)$ : ``` $$(1 + 2)$$ ```  
+  + 중괄호  $\lbrace1 + 2\rbrace$ : ``` $$\lbrace1 + 2\rbrace$$ ```
+  + 대괄호  $[1 + 2]$ : ``` $[1 + 2]$$ ```  
+  + 괄호 자동 리사이징 $\left( \frac{2}{3} \right)$ : ``` $$\left( \frac{2}{3} \right)$$ ```  
+  + $\Bigg( \bigg( \Big( \big( ( ) \big) \Big) \bigg) \Bigg)$ : ``` $$\Bigg( \bigg( \Big( \big( ( ) \big) \Big) \bigg) \Bigg)$$ ```
+- 집합
+  + $\{a,b,c\} \cup \{d,e\} = \{a,b,c,d,e\}$ ``` $$\{a,b,c\} \cup \{d,e\} = \{a,b,c,d,e\}$$ ```  
+  + $\{a,b,c\} \cap \{a,b,d\} = \{a,b\}$ ``` $$\{a,b,c\} \cap \{a,b,d\} = \{a,b\}$$ ```
+  + $x \in [-1,1]$ ``` $$x \in [-1,1]$$ ```
+  + $\cos (2\theta) = \cos^2 \theta - \sin^2 \theta$ ``` $$\cos (2\theta) = \cos^2 \theta - \sin^2 \theta$$ ```
 
-  - 
+- 행렬
+  $$A_{m,n} =  
+  \begin{pmatrix}  
+  a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\  
+  a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\  
+  \vdots  & \vdots  & \ddots & \vdots  \\  
+  a_{m,1} & a_{m,2} & \cdots & a_{m,n}  
+  \end{pmatrix}$$
+  ```
+  $$A_{m,n} =
+  \begin{pmatrix}
+  a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
+  a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
+  \vdots  & \vdots  & \ddots & \vdots  \\
+  a_{m,1} & a_{m,2} & \cdots & a_{m,n}
+  \end{pmatrix}$$  ```
+- Vector, Scalar
+  + $\overrightarrow{AB}$ : ``` $$\overrightarrow{AB}$$ or $$\overline{AB}$$ ```
 
 
 ### 5. 각주  
