@@ -169,9 +169,11 @@ A(입력)-->B[연산]
 B-->C(출력)
 ```
 
+    ```mermaid
     graph LR
       A(입력)-->B[연산]
       B-->C(출력)
+    ```
 
 ###### Case_2
 ```mermaid
