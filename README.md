@@ -25,7 +25,7 @@
   - [B-4. 수식](#수식)
   - [B-5. 각주](#각주)
 
---- 
+---
 
 # Diagram
 ### 6. [User Journey](https://mermaid.js.org/syntax/userJourney.html)  
@@ -357,9 +357,9 @@ gantt
 
 
 # Text
-### 1 칸 띄우기
+### 1-1 4칸 띄우기
 
-[칸 띄우기](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbjKx6J%2FbtqIOarD9DF%2FxH33ypKG8Zyi7SGLQeT241%2Fimg.png)
+``` &emsp; ```  
 
 
 ### 2 형광색 처리
