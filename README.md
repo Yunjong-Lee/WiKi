@@ -165,13 +165,15 @@ flowchart LR
 ###### case_1  
 ```mermaid
   graph LR
-A(입력)-->B[연산]
+A(입력)
+A-->B[연산]
 B-->C(출력)
 ```
 
     ```mermaid
     graph LR
-      A(입력)-->B[연산]
+      A(입력)
+      A-->B[연산]
       B-->C(출력)
     ```
 
