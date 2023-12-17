@@ -113,18 +113,34 @@ flowchart LR
 
 ###### 3.2.
 ```mermaid
-  flowchart LR
+  flowchart LR;
     subgraph Case_01
       B1 --> B2
     end
     A --> Case_01 --> B
 ```
 
-    flowchart LR
+```mermaid
+  flowchart LR;
+    direction TB
+    subgraph Static_Clutter_Removal
+      B(선형 추세 제거)
+    end
+    subgraph Frequency_Windowing
+      C(slow-time dimension)
+    end
+    Static_Clutter_Removal-->Frequency_Windowing
+    Frequency_Windowing-->D(cell-averaging);
+    D-->E(임계값 설정 및 감지);
+```
+
+ 
+    flowchart LR;
       subgraph Case_01
         B1 --> B2
       end
       A --> Case_01 --> B
+      
 
     
 ###### 3.3.
