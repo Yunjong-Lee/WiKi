@@ -3,6 +3,8 @@
 # Markdown 문법
 [ref](https://eungbean.github.io/2018/06/11/How-to-use-markdown/)  
 
+[수식](http://tomoyo.ivyro.net/123/wiki.php/TeX_%EB%B0%8F_LaTeX_%EC%88%98%EC%8B%9D_%EB%AC%B8%EB%B2%95)
+
 
 ---
 
