@@ -1,7 +1,9 @@
 # This space is to summarieze concept or theory related to Communication or Radio Waves, for my sunny.
 
-# ✔ Please see the wiki at "Yunjong-Lee/Yunjong-Lee" Repository.
+## ✔ Please see the wiki at "Yunjong-Lee/Yunjong-Lee" Repository.  
 
+
+</br>  
 
 # 인생명언_정주영회장
 - 길이 없으면 길을 찾아라, 찾아도 없으면 길을 닦아 나아가라
@@ -12,4 +14,4 @@
 
 --- 
  
-- [아버지의 모습_한옥마을 전통혼례식장에서](https://www.youtube.com/watch?v=yv5YoxpTPtg)
+# [아버지의 모습_한옥마을 전통혼례식장에서](https://www.youtube.com/watch?v=yv5YoxpTPtg)
